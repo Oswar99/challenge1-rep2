@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IProveedor } from "./Proveedor"
+import { IProveedor } from "./proveedor.model"
 
 export interface IObra extends mongoose.Document{
     Nombre : string;

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IDireccion } from "./Direccion"
+import { IDireccion } from "./direccion.model"
 
 export interface IProveedor extends mongoose.Document{
     RTN: string;
