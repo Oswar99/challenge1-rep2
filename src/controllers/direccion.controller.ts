@@ -9,6 +9,13 @@ export class DireccionController{
     }
 
     private routes(){
+        this.app.route("/direcciones").get(this.dir_service.getAll);
         
+        this.app.route("/direccion").post(this.dir_service.New);
+
+        this.app.route("/direccion/:id")
+        .get(this.dir_service.getById)
+        .put(this.dir_service.Update)
+        .delete(this.dir_service.Delete);
     }
 }

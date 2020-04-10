@@ -9,6 +9,13 @@ export class ProveedorController{
     }
 
     private routes(){
+        this.app.route("/proveedores").get(this.prov_service.getAll);
         
+        this.app.route("/proveedor").post(this.prov_service.New);
+
+        this.app.route("/proveedor/:id")
+        .get(this.prov_service.getById)
+        .put(this.prov_service.Update)
+        .delete(this.prov_service.Delete);
     }
 }
